@@ -8,6 +8,14 @@ You have been given a dataset of the medications that are used for each medicati
 You will use [FHIR](https://www.hl7.org/fhir) as a common schema across the various data sources.  You can find the specifications for all FHIR resources [here](https://www.hl7.org/fhir/resourcelist.html).
 
 
+# Coding Environment and Submitting Results
+To get started, just click the Button below. It will open up an interactive IDE in GitPod, which will have all you need to get started.
+
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/carta-healthcare/carta-work-tests)
+
+Once you have completed all of your required tests, click on the "Workspace" menu at the top, click "Share Workspace Snapshot," and send the resulting
+link back to us.
+
 # The Goal
 Your goal is to answer the following questions:
 
@@ -36,7 +44,9 @@ Bonus / Optional:
 * Condition resource(s)
 
 ## Part 2:  VIS Score Time-Series
-The output for 2) should look like a plot with time on the X-axis, and VIS score on the Y-axis.  Significant points in time should be clearly indicated.  This plot should start at hospital admit and end at hospital discharge.  Also save the raw data as a .csv file with the columns:  timestamp, vis_score
+The output for 2) should look like a step-function plot with time on the X-axis, and VIS score on the Y-axis.  Refer to the below educational note on how medication infusion data is recorded.  Significant and clinically relevant time points/periods should be clearly indicated on the plot.  This plot should start at the patient's admission to the hospital, and end at hospital discharge.
+
+Additionally, save the raw plotted data as a .csv file with the columns:  timestamp, vis_score
 
 * results/VIS_timeseries.png
 * results/VIS_timeseries.csv
@@ -70,16 +80,17 @@ The output after the raw sample note is fed through the Natural Language Process
 ### Relevant UMLS terms/codes
 
 | UMLS Code | Term |
-|----------|------------------------|
-| C0018817 | Atrial Septal Defect   |
-| C0803906 | Birth Date             |
-| C0086582 | Male                   |
-| C0086287 | Female                 |
-| C0184666 | Hospital Admission     |
-| C0586003 | Hospital Discharge     |
-| C5240707 | ICU admission date     |
-| C5240710 | ICU discharge date     |
-| C2243117 | Echocardiogram         |
+|----------|--------------------------------|
+| C0018817 | Atrial Septal Defect           |
+| C0189965 | Closure of atrial septal defect|
+| C0803906 | Birth Date                     |
+| C0086582 | Male                           |
+| C0086287 | Female                         |
+| C0184666 | Hospital Admission             |
+| C0586003 | Hospital Discharge             |
+| C5240707 | ICU admission date             |
+| C5240710 | ICU discharge date             |
+| C2243117 | Echocardiogram                 |
 
 
 ## medication-administrations.json
